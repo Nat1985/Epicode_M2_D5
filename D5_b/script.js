@@ -132,50 +132,109 @@ console.log("L'ultimo oggetto è: " + latestShoppingCart(shoppingCart)); */
  La funzione mostra in console un numero casuale tra 0 e 9 finchè il numero estratto è maggiore di x per 3 volte di fila.
 */
 
-function loopUntil(intX) {
+/* function loopUntil(intX) {
     if (intX <= 9) {
+        let randomSerie = "";
+        let expiredAttempt = 1;
         n = 0
         while (n < 3) {
-            let randomNumber = Math.round(Math.random() * 9);
+            let randomNumber = Math.floor(Math.random() * 10);
             if (randomNumber > intX) {
-                console.log("Il numero random fra 0 e 9 è " + randomNumber);
+                randomSerie = randomSerie.concat(randomNumber + " ");
                 n++;
             } else if (randomNumber <= intX) {
-                n = 0
+                expiredAttempt++;
+                randomSerie = "";
+                n = 0;
             }
         }
+        console.log("Numeri random maggiori di " + intX + " consecutivi per 3 volte: " + randomSerie);
+        console.log("dopo " + expiredAttempt + " tentativi");
     } else {
         console.log("Inserire un numero compreso fra 0 e 9");
     }
 }
 
-console.log(Math.round(Math.random() * 9));
+loopUntil(5); */
 
 /* EXTRA 7
  Crea una funzione chiamata "average" che riceve un array come parametro e ritorna la media aritmetica dei numeri in esso contenuti.
  La funzione salta automaticamente qualsiasi valore non numerico all'interno dell'array.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* let valueList = [3, 6, 8, "a", "b", 5, true, 33];
+
+console.log("La media dei valori numerici all'interno dell'array è ")
+console.log(average(valueList));
+
+function average(array) {
+    let totalNumbers = 0;
+    let NumbersSum = 0;
+    for (i = 0; i < valueList.length; i++) {
+        if (typeof valueList[i] === "number") {
+            totalNumbers++;
+            NumbersSum += (valueList[i]);
+        }
+    }
+    let averageResult = NumbersSum / totalNumbers;
+        return averageResult;
+} */
 
 /* EXTRA 8
  Scrivi una funzione chiamata "longest" che ricerca la stringa più lunga all'interno del parametro ricevuto (un array di stringhe).
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* let array = [
+    "Ciao",
+    "Buongiorno",
+    "Arrivederci",
+    "Addio"
+]
+
+console.log("La parola più lunga all'interno dell'array è:");
+console.log(longest(array));
+
+function longest(stringsArray) {
+    let LongestString = "";
+    for (i = 0; i < stringsArray.length; i++) {
+        if (stringsArray[i].length > LongestString.length) {
+            LongestString = stringsArray[i];
+        }
+    }
+    return LongestString;
+} */
 
 /* EXTRA 9
  Scrivi una funzione per creare un filtro anti spam molto semplice per una casella email. La funzione riceve una stringa come parametro, "emailContent", e ritorna un boolean.
  La funzione deve tornare true se emailContent NON contiene le parole "SPAM" o "SCAM".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* let string = "SPAM Scam";
+console.log("L'email non contiene le parole scam o spam:")
+console.log(checkSpam(string));
+
+function checkSpam(emailContent) {
+    let lowerCaseString = emailContent.toLowerCase();
+    if (lowerCaseString.includes("spam") || lowerCaseString.includes("scam")) {
+        return false;
+    } else {
+        return true;
+    }
+} */
 
 /* EXTRA 10
  Scrivi una funzione che riceve come parametro una data e ritorna il numero di giorni passati ad oggi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* let myDate = new Date(2020, 07, 22);
+console.log("Ad oggi sono passati " + dayDifference(myDate) + " giorni.");
+
+function dayDifference(pastDate) {
+    let today = new Date();
+    let millisecondsDifference = today - pastDate;
+    let days = Math.floor(millisecondsDifference / 1000 / 60 / 60 / 24);
+    return days;
+} */
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due interi, "x" e "y".
@@ -185,4 +244,16 @@ console.log(Math.round(Math.random() * 9));
  "10","11","12"]
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* console.log(matrixGenerator(6, 9));
+
+function matrixGenerator(x, y) {
+    let matrix = [];
+    let forStorage = 0;
+    for (i = 0; i < y; i++) {
+        for (n = 0; n < x; n++) {
+            matrix[forStorage] = i.toString() + n.toString();
+            forStorage ++;
+        }
+    }
+    return matrix;
+} */
