@@ -140,9 +140,6 @@ function loopUntil(intX) {
             if (randomNumber > intX) {
                 console.log("Il numero random fra 0 e 9 è " + randomNumber);
                 n++;
-                if (n = 3) {
-                    break;
-                }
             } else if (randomNumber <= intX) {
                 n = 0
             }

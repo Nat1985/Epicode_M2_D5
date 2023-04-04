@@ -88,14 +88,14 @@ console.log(codify("codenow")); */
  SUGGERIMENTO: operatore modulo
 */
 
-/* function check3and7(intNum) {
+function check3and7(intNum) {
     if (!(intNum % 3) || !(intNum % 7)) {
         return true;
     } else {
         return false;
     }
 }
-console.log(check3and7(39)); */
+console.log(check3and7(39));
 
 /* ESERCIZIO 7
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
