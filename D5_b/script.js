@@ -39,7 +39,7 @@ function giveMeRandom(n) {
  Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio.
 */
 
-/* let shoppingCart = [
+let shoppingCart = [
     {
         name: "Wheels",
         price: 98,
@@ -48,19 +48,19 @@ function giveMeRandom(n) {
     },
     {
         name: "Auto Cleaner",
-        price: 18,
+        price: 180,
         id: "dr82",
         amount: 1
     },
     {
         name: "Front Wiper",
-        price: 23,
+        price: 113,
         id: "z87h",
         amount: 2
     }
 ];
 
-console.log("Il totale del carrello è: " + shoppingCartTotal(shoppingCart));
+/* console.log("Il totale del carrello è: " + shoppingCartTotal(shoppingCart));
 
 function shoppingCartTotal(cart) {
     let total = 0;
@@ -75,28 +75,84 @@ function shoppingCartTotal(cart) {
  Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto, lo aggiunge allo shoppingCart e ritorna il numero totale degli oggetti in esso contenuti.
 */
 
-let shoppingCart = [];
+
+
+/* let interiorCleaner = {
+    name: "Interior Cleaner",
+    price: 34,
+    id: "jk45",
+    amount: 2
+}
+
+console.log(addToShoppingCart(interiorCleaner));
+console.log(shoppingCart);
+
+function addToShoppingCart(newObject) {
+    shoppingCart.push(newObject);
+    return shoppingCart.length;
+} */
 
 /* EXTRA 4
  Nel tuo sito e-commerce hai un array di oggetti chiamato shoppingCart. Ognuno di questi oggetti ha un prezzo, un nome, un id e la quantità da spedire.
  Crea una funzione chiamata "maxShoppingCart" che riceve l'array shoppingCart e ritorna l'oggetto più costoso in esso contenuto.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* function maxShoppingCart(array) {
+    let moreExp;
+    let moreExpCost = 0;
+    for (i = 0; i < array.length; i++) {
+        if (array[i].price > moreExpCost) {
+            moreExpCost = array[i].price;
+            moreExp = i;
+        }
+    }
+    return moreExp;
+}
+
+let returnedValue = maxShoppingCart(shoppingCart)
+console.log("L'oggetto più costoso è quello alla posizione n." + returnedValue + " (" + shoppingCart[returnedValue]. name + ")"); */
+
+
 
 /* EXTRA 5
  Nel tuo sito e-commerce hai un array di oggetti chiamato shoppingCart. Ognuno di questi oggetti ha un prezzo, un nome, un id e la quantità da spedire.
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array shoppingCart e ritorna l'ultimo oggetto in esso contenuto.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* function latestShoppingCart(array) {
+    let lastObject = array[array.length - 1].name;
+    return lastObject;
+}
+
+console.log("L'ultimo oggetto è: " + latestShoppingCart(shoppingCart)); */
+
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve come parametro un intero "x" compreso tra 0 e 9.
  La funzione mostra in console un numero casuale tra 0 e 9 finchè il numero estratto è maggiore di x per 3 volte di fila.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function loopUntil(intX) {
+    if (intX <= 9) {
+        n = 0
+        while (n < 3) {
+            let randomNumber = Math.round(Math.random() * 9);
+            if (randomNumber > intX) {
+                console.log("Il numero random fra 0 e 9 è " + randomNumber);
+                n++;
+                if (n = 3) {
+                    break;
+                }
+            } else if (randomNumber <= intX) {
+                n = 0
+            }
+        }
+    } else {
+        console.log("Inserire un numero compreso fra 0 e 9");
+    }
+}
+
+console.log(Math.round(Math.random() * 9));
 
 /* EXTRA 7
  Crea una funzione chiamata "average" che riceve un array come parametro e ritorna la media aritmetica dei numeri in esso contenuti.
