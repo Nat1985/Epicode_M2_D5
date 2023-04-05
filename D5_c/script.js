@@ -831,7 +831,7 @@ const jobs = [
   },
 ]
 
-console.log(searchJob("English", "NY"));
+console.log(searchJob("", "NY"));
 
 function searchJob(what, where) {
   let lowerWhat = what.toLowerCase();
@@ -847,7 +847,15 @@ function searchJob(what, where) {
       result.push(jobs[i]);
     }
   }
+  for (n = 0; n < result.length; n ++) {
+    delete result[n].description;
+    delete result[n].requirements;
+    delete result[n].benefits;
+    delete result[n].company_profile;
+  }
   console.log("Risultati trovati: " + count);
   return result;
 
 }
+
+/* "description", "requirements", "benefits" e "company_profile" */
