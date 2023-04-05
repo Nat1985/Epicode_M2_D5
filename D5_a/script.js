@@ -11,18 +11,20 @@ REGOLE
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-/* function area(l1, l2) {
+console.log("ESERCIZIO 1:"); // titolo
+function area(l1, l2) {
     let areaRet = l1 * l2;
     return areaRet;
 }
-console.log(area(3, 4)); */
-
+console.log(area(3, 4));
+console.log(""); //spazio
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazySum" che riceve due numeri interi come parametri.
  La funzione deve ritornare la somma di quei due valori, ma se il loro valore è lo stesso allora deve ritornare la loro somma moltiplicata per 3.
 */
 
-/* function crazySum(intA, intB) {
+console.log("ESERCIZIO 2:");
+function crazySum(intA, intB) {
     let sum;
     if (intA !== intB) {
         sum = intA + intB;
@@ -31,7 +33,8 @@ console.log(area(3, 4)); */
     }
     return sum;
 }
-console.log("La somma dei numeri è (* 3 se sono uguali): " + crazySum(13, 13)); */
+console.log("La somma dei numeri è (* 3 se sono uguali): " + crazySum(13, 13));
+console.log(""); //spazio
 
 
 /* ESERCIZIO 3
@@ -39,20 +42,23 @@ console.log("La somma dei numeri è (* 3 se sono uguali): " + crazySum(13, 13));
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-/* function crazyDiff(a) {
+console.log("ESERCIZIO 3:"); //titolo
+function crazyDiff(a) {
     let diff = a - 19;
     if (diff > 19) {
         diff *= 3;
     }
     return diff;
 }
-console.log(crazyDiff(109)); */
+console.log(crazyDiff(109));
+console.log(""); //spazio
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20 e 100 (incluso) o se è esattamente uguale a 400.
 */
 
-/* function boundary(intA) {
+console.log("ESERCIZIO 4:"); //titolo
+function boundary(intA) {
     if ((intA >= 20 && intA <= 100) || (intA === 400)) {
         return true;
     } else {
@@ -60,14 +66,16 @@ console.log(crazyDiff(109)); */
     }
 }
 let intA = 20;
-console.log("Valore di ritorno della funzione per il numero: " + intA + ": " + boundary(intA)); */
+console.log("Valore di ritorno della funzione per il numero: " + intA + ": " + boundary(intA));
+console.log(""); //spazio
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-/* function codify(string) {
+console.log("ESERCIZIO 5:"); //titolo
+function codify(string) {
     let codeTest = "";
     for (i = 0; i < 4; i++) {
         codeTest = codeTest.concat(string[i]);
@@ -79,7 +87,8 @@ console.log("Valore di ritorno della funzione per il numero: " + intA + ": " + b
         return string;
     }
 }
-console.log(codify("codenow")); */
+console.log(codify("ciao"));
+console.log(""); //spazio
 
 
 /* ESERCIZIO 6
@@ -88,20 +97,23 @@ console.log(codify("codenow")); */
  SUGGERIMENTO: operatore modulo
 */
 
-/* function check3and7(intNum) {
+console.log("ESERCIZIO 6:"); //titolo
+function check3and7(intNum) {
     if (!(intNum % 3) || !(intNum % 7)) {
         return true;
     } else {
         return false;
     }
 }
-console.log(check3and7(39)); */
+console.log(check3and7(39));
+console.log(""); //spazio
 
 /* ESERCIZIO 7
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
 */
 
-/* function reverseString(string) {
+console.log("ESERCIZIO 7:"); //titolo
+function reverseString(string) {
     let rev = "";
     for (i = string.length; i > 0; i--) {
         rev = rev.concat(string[i - 1]);
@@ -110,14 +122,15 @@ console.log(check3and7(39)); */
 }
 let inserireStringa = "invertiquesta";
 console.log("La stringa invertita di " + inserireStringa.toUpperCase() + " è:")
-console.log(reverseString(inserireStringa)); */
+console.log(reverseString(inserireStringa));
+console.log(""); //spazio
 
 /* ESERCIZIO 8
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
-
-/* function upperFirst(string) {
+console.log("ESERCIZIO 8:"); //titolo
+function upperFirst(string) {
     let newLetters = "";
     let spaceNow = true;
     for (i = 0; i < string.length; i++) {
@@ -130,13 +143,15 @@ console.log(reverseString(inserireStringa)); */
     }
     return newLetters;
 }
-console.log(upperFirst("OGNUNA di QUESTE parole AVRA' soltanto LA prima LETTERA maiuscola")); */
+console.log(upperFirst("cosi scrivi QUELLO CHE VUOI"));
+console.log(""); //spazio
 
 /* ESERCIZIO 9
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-/* function cutString(string) {
+console.log("ESERCIZIO 9:"); //titolo
+function cutString(string) {
     let newWord = "";
     for (i = 0; i < string.length; i++) {
         if (i !== 0 && i !== string.length - 1) {
@@ -145,17 +160,20 @@ console.log(upperFirst("OGNUNA di QUESTE parole AVRA' soltanto LA prima LETTERA 
     }
     return newWord;
 }
-console.log(cutString("stringa senza la prima e l'ultima lettera")); */
+console.log(cutString("stringa senza la prima e l'ultima lettera"));
+console.log(""); //spazio
 
 /* ESERCIZIO 10
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
-/* function giveMeRandom(n) {
+console.log("ESERCIZIO 10:"); //titolo
+function giveMeRandom(n) {
     let randomArray = [];
     for (i = 0; i < n; i++) {
         randomArray.push(Math.round(Math.random() * 10));
     }
     return randomArray;
 }
-console.log(giveMeRandom(14)); */
+console.log(giveMeRandom(14));
+console.log("");
